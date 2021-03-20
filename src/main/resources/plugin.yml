@@ -4,8 +4,8 @@ main: me.fazzyplayzmc.core.Core
 api-version: 1.16
 depend: [ Vault ]
 authors: [ FazzyPlayzMc ]
-description: Core plugin for ThePrizRealm
-website: https://theprizrealm.net
+description: Core plugin
+website: []
 commands:
   fly:
     description: Toggle Fly
