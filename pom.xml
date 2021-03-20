@@ -11,12 +11,11 @@
 
     <name>Core</name>
 
-    <description>Core plugin for ThePrizRealm</description>
+    <description>Core plugin</description>
     <properties>
         <java.version>1.8</java.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
-    <url>https://theprizrealm.net</url>
 
     <build>
         <plugins>
