@@ -1,0 +1,14 @@
+name: Core
+version: ${project.version}
+main: me.fazzyplayzmc.core.Core
+api-version: 1.16
+depend: [ Vault ]
+authors: [ FazzyPlayzMc ]
+description: Core plugin for ThePrizRealm
+website: https://theprizrealm.net
+commands:
+  fly:
+    description: Enable Fly
+    usage: /<command>
+
+

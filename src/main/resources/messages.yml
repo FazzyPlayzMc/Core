@@ -1,0 +1,10 @@
+# This is the messages file for the Core plugin
+# Almost every single message will be customizable here!
+
+# Message sent when a player doesn't have permission to execute
+# a Command
+no-permission: '&cYou do not have permission to execute this command!'
+
+# Option for changing Fly toggle messages
+fly-true: '&eFly has been set to &aTrue'
+fly-false: '&eFly has been set to &cFalse'
