@@ -1,0 +1,6 @@
+# All permission nodes will be listed here!
+
+/fly - core.command.fly
+/fly (player) - core.command.fly.others
+/gmc - core.command.gamemode.creative
+/gmc, /gms, /gmsp, /gma (player) - core.command.gamemode.others

@@ -8,7 +8,10 @@ description: Core plugin for ThePrizRealm
 website: https://theprizrealm.net
 commands:
   fly:
-    description: Enable Fly
+    description: Toggle Fly
+    usage: /<command>
+  gmc:
+    description: Toggle gamemode creative
     usage: /<command>
 
 
