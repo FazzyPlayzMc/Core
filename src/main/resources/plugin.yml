@@ -10,18 +10,17 @@ website: []
 commands:
   fly:
     description: Toggle Fly
-    usage: /<command>
   gmc:
     description: Toggle gamemode creative
-    usage: /<command>
   gms:
     description: Toggle gamemode survival
-    usage: /<command>
   gmsp:
     description: Toggle gamemode spectator
-    usage: /<command>
   gma:
     description: Toggle gamemode adventure
-    usage: /<command>
+  msg:
+    description: Message other players
+  r:
+    description: Reply to player messages
 
 

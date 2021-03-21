@@ -1,8 +1,11 @@
 # This is the messages file for the Core plugin
 # Almost every single message will be customizable here!
 
-#Sent when the executer isn't a player
+# Sent when the executer isn't a player
 must-be-player: '&cYou must be a player to execute this command!'
+
+# Sent when player is not online
+player-not-online: '&cThis player is not online!'
 
 # Message sent when a player doesn't have permission to execute
 # a Command
@@ -17,3 +20,10 @@ gamemode-creative: '&eGamemode has been set to &aCreative'
 gamemode-survival: '&eGamemode has been set to &aSurvival'
 gamemode-spectator: '&eGamemode has been set to &aSpectator'
 gamemode-adventure: '&eGamemode has been set to &aAdventure'
+
+# /msg Format
+msg-format: '&e/msg &7(Player) (Message)'
+# /r Format
+reply-format: '&e/r &7(Message)'
+# Message sent to messager when replying but no conversation has taken place
+no-conversation: '&cNo conversation has taken place!'
