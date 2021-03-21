@@ -15,3 +15,5 @@ fly-false: '&eFly has been set to &cFalse'
 # Option for changing Gamemode messages
 gamemode-creative: '&eGamemode has been set to &aCreative'
 gamemode-survival: '&eGamemode has been set to &aSurvival'
+gamemode-spectator: '&eGamemode has been set to &aSpectator'
+gamemode-adventure: '&eGamemode has been set to &aAdventure'

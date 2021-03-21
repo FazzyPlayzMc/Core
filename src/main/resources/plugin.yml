@@ -17,5 +17,11 @@ commands:
   gms:
     description: Toggle gamemode survival
     usage: /<command>
+  gmsp:
+    description: Toggle gamemode spectator
+    usage: /<command>
+  gma:
+    description: Toggle gamemode adventure
+    usage: /<command>
 
 
