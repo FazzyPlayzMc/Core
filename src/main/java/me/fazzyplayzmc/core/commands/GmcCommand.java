@@ -17,6 +17,7 @@ public class GmcCommand implements CommandExecutor {
         this.plugin = plugin;
     }
 
+    // Command for changing Gamemode to creative for yourself and others
     @Override
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
         if (!(sender instanceof Player)) {
@@ -37,6 +38,7 @@ public class GmcCommand implements CommandExecutor {
         return true;
     }
 
+    // Method for changing gamemode
     private void gmcMethod(Player player) {
         if (player.hasPermission("core.command.gamemode.creative")) {
             player.setGameMode(GameMode.CREATIVE);

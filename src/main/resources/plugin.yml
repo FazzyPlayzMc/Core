@@ -3,6 +3,7 @@ version: ${project.version}
 main: me.fazzyplayzmc.core.Core
 api-version: 1.16
 depend: [ Vault ]
+softdepend: [ PlaceholderAPI ]
 authors: [ FazzyPlayzMc ]
 description: Core plugin
 website: []
@@ -12,6 +13,9 @@ commands:
     usage: /<command>
   gmc:
     description: Toggle gamemode creative
+    usage: /<command>
+  gms:
+    description: Toggle gamemode survival
     usage: /<command>
 
 
