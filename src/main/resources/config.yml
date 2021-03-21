@@ -1,6 +1,9 @@
 # This is the messages file for the Core plugin
 # Almost every single message will be customizable here!
 
+#Sent when the executer isn't a player
+must-be-player: '&cYou must be a player to execute this command!'
+
 # Message sent when a player doesn't have permission to execute
 # a Command
 no-permission: '&cYou do not have permission to execute this command!'
@@ -11,6 +14,3 @@ fly-false: '&eFly has been set to &cFalse'
 
 # Option for changing Gamemode messages
 gamemode-creative: '&eGamemode has been set to &aCreative'
-gamemode-survival: '&eGamemode has been set to &aSurvival'
-gamemode-adventure: '&eGamemode has been set to &aAdventure'
-gamemode-spectator: '&eGamemode has been set to &aSpectator'

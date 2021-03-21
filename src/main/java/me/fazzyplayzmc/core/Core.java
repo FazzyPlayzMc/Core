@@ -1,7 +1,7 @@
 package me.fazzyplayzmc.core;
 
-import me.fazzyplayzmc.core.commands.flyCommand;
-import me.fazzyplayzmc.core.commands.gmcCommand;
+import me.fazzyplayzmc.core.commands.FlyCommand;
+import me.fazzyplayzmc.core.commands.GmcCommand;
 import org.bukkit.plugin.java.JavaPlugin;
 
 public final class Core extends JavaPlugin {
@@ -13,7 +13,7 @@ public final class Core extends JavaPlugin {
         getConfig().options().copyDefaults();
 
         // Set commands here
-        getCommand("fly").setExecutor(new flyCommand(this));
-        getCommand("gmc").setExecutor(new gmcCommand(this));
+        getCommand("fly").setExecutor(new FlyCommand(this));
+        getCommand("gmc").setExecutor(new GmcCommand(this));
     }
 }
