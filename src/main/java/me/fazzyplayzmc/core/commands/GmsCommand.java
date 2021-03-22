@@ -21,7 +21,8 @@ public class GmsCommand implements CommandExecutor {
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
         if (!(sender instanceof Player)) {
             sender.sendMessage(ChatColor.translateAlternateColorCodes('&', plugin.getConfig().getString("must-be-player")));
-        } else {
+            return true;
+        }
             Player player = (Player) sender;
             if(args.length == 0){
                 gmsMethod(player);
@@ -33,7 +34,6 @@ public class GmsCommand implements CommandExecutor {
                     player.sendMessage(ChatColor.translateAlternateColorCodes('&', plugin.getConfig().getString("no-permission")));
                 }
             }
-        }
         return true;
     }
 

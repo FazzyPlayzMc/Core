@@ -22,7 +22,8 @@ public class FlyCommand implements CommandExecutor {
 
         if (!(sender instanceof Player)){
             sender.sendMessage(ChatColor.translateAlternateColorCodes('&', plugin.getConfig().getString("must-be-player")));
-        } else {
+            return true;
+        }
             Player player = (Player) sender;
             if(args.length == 0){
                 flyMethod(player);
@@ -34,7 +35,6 @@ public class FlyCommand implements CommandExecutor {
                     player.sendMessage(ChatColor.translateAlternateColorCodes('&', plugin.getConfig().getString("no-permission")));
                 }
             }
-        }
 
         return true;
     }

@@ -19,7 +19,8 @@ public class ReplyCommand implements CommandExecutor {
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args){
         if(!(sender instanceof Player)){
             sender.sendMessage(ChatColor.translateAlternateColorCodes('&', plugin.getConfig().getString("must-be-player")));
-        } else {
+            return true;
+        }
             if (args.length > 0){
                 Player messager = (Player) sender;
                 if(plugin.mM.getReplyTarget(messager) == null){
@@ -37,7 +38,6 @@ public class ReplyCommand implements CommandExecutor {
             } else {
                 sender.sendMessage(ChatColor.translateAlternateColorCodes('&', plugin.getConfig().getString("reply-format")));
             }
-        }
         return false;
     }
 }

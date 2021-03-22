@@ -21,7 +21,8 @@ public class MsgCommand implements CommandExecutor {
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
         if(!(sender instanceof Player)){
             sender.sendMessage(ChatColor.translateAlternateColorCodes('&', plugin.getConfig().getString("must-be-player")));
-        } else {
+            return true;
+        }
             if(args.length > 0){
                 if(Bukkit.getOfflinePlayer(args[0]).getPlayer() != null){
                     Player messager = (Player) sender;
@@ -40,7 +41,6 @@ public class MsgCommand implements CommandExecutor {
             } else {
                 sender.sendMessage(ChatColor.translateAlternateColorCodes('&', plugin.getConfig().getString("msg-format")));
             }
-        }
         return false;
     }
 }
