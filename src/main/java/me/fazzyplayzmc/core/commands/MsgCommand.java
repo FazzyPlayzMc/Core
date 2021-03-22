@@ -23,6 +23,8 @@ public class MsgCommand implements CommandExecutor {
             sender.sendMessage(ChatColor.translateAlternateColorCodes('&', plugin.getConfig().getString("must-be-player")));
             return true;
         }
+        Player player = (Player) sender;
+        if(player.hasPermission("core.command.message")){
             if(args.length > 0){
                 if(Bukkit.getOfflinePlayer(args[0]).getPlayer() != null){
                     Player messager = (Player) sender;
@@ -41,6 +43,9 @@ public class MsgCommand implements CommandExecutor {
             } else {
                 sender.sendMessage(ChatColor.translateAlternateColorCodes('&', plugin.getConfig().getString("msg-format")));
             }
+        } else {
+            player.sendMessage(ChatColor.translateAlternateColorCodes('&', plugin.getConfig().getString("no-permission")));
+        }
         return false;
     }
 }

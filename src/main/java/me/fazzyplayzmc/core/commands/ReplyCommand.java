@@ -21,6 +21,8 @@ public class ReplyCommand implements CommandExecutor {
             sender.sendMessage(ChatColor.translateAlternateColorCodes('&', plugin.getConfig().getString("must-be-player")));
             return true;
         }
+        Player player = (Player) sender;
+        if (player.hasPermission("core.command.reply")){
             if (args.length > 0){
                 Player messager = (Player) sender;
                 if(plugin.mM.getReplyTarget(messager) == null){
@@ -38,6 +40,9 @@ public class ReplyCommand implements CommandExecutor {
             } else {
                 sender.sendMessage(ChatColor.translateAlternateColorCodes('&', plugin.getConfig().getString("reply-format")));
             }
+        } else {
+            player.sendMessage(ChatColor.translateAlternateColorCodes('&', plugin.getConfig().getString("no-permission")));
+        }
         return false;
     }
 }
