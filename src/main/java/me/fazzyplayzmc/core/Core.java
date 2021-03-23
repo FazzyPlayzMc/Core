@@ -21,6 +21,8 @@ public final class Core extends JavaPlugin {
         getCommand("gmsp").setExecutor(new GmspCommand(this));
         getCommand("msg").setExecutor(new MsgCommand(this));
         getCommand("r").setExecutor(new ReplyCommand(this));
+        getCommand("discord").setExecutor(new DiscordCommand(this));
+        getCommand("website").setExecutor(new WebCommand(this));
         mM = new messageManager(this);
     }
 }

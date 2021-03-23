@@ -22,5 +22,10 @@ commands:
     description: Message other players
   r:
     description: Reply to player messages
+  discord:
+    description: Display discord server invite link
+  website:
+    description: Display website link
+    aliases: [web]
 
 

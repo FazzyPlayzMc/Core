@@ -27,3 +27,8 @@ msg-format: '&e/msg &7(Player) (Message)'
 reply-format: '&e/r &7(Message)'
 # Message sent to messager when replying but no conversation has taken place
 no-conversation: '&cNo conversation has taken place!'
+
+# Sent when sender executes /discord
+discord-output: '&bDiscord &7: &bhttps://discord.gg/invite-code-here'
+# Sent when sender executes /website
+website-output: '&aWebsite &7: &ahttps://your-link-here'

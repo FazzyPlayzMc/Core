@@ -9,3 +9,5 @@
 /gmc, /gms, /gmsp, /gma (player) - core.command.gamemode.others
 /msg (player) (message) - core.command.message
 /r (message) - core.command.reply
+/discord - core.command.discord
+/website - core.command.website
