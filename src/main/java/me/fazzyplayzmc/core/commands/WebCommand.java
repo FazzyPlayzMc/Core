@@ -15,6 +15,7 @@ public class WebCommand implements CommandExecutor {
         this.plugin = plugin;
     }
 
+    @Override
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args){
         if(!(sender instanceof Player)){
             sender.sendMessage(ChatColor.translateAlternateColorCodes('&', plugin.getConfig().getString("must-be-player")));

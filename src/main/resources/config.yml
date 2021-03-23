@@ -32,3 +32,8 @@ no-conversation: '&cNo conversation has taken place!'
 discord-output: '&bDiscord &7: &bhttps://discord.gg/invite-code-here'
 # Sent when sender executes /website
 website-output: '&aWebsite &7: &ahttps://your-link-here'
+
+# /broascast Format
+broadcast-format: '&c/(Broadcast, Alert, Announce) (message)'
+# Broadcast prefix
+broadcast-prefix: '&c&lALERT&7:&f '

@@ -27,5 +27,8 @@ commands:
   website:
     description: Display website link
     aliases: [web]
+  broadcast:
+    description: Send an announcement to everyone
+    aliases: [announce, alert]
 
 
