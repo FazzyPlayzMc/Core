@@ -24,6 +24,10 @@ public final class Core extends JavaPlugin {
         getCommand("discord").setExecutor(new DiscordCommand(this));
         getCommand("website").setExecutor(new WebCommand(this));
         getCommand("broadcast").setExecutor(new BroadcastCommand(this));
+        getCommand("kill").setExecutor(new KillCmd(this));
+        getCommand("suicide").setExecutor(new SuicideCmd(this));
+        getCommand("heal").setExecutor(new HealCmd(this));
+        getCommand("feed").setExecutor(new FeedCmd(this));
         mM = new messageManager(this);
     }
 }

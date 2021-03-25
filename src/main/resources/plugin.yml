@@ -3,7 +3,7 @@ version: ${project.version}
 main: me.fazzyplayzmc.core.Core
 api-version: 1.16
 depend: [ Vault ]
-softdepend: [ PlaceholderAPI ]
+softdepend: []
 authors: [ FazzyPlayzMc ]
 description: Core plugin
 website: []
@@ -30,5 +30,13 @@ commands:
   broadcast:
     description: Send an announcement to everyone
     aliases: [announce, alert]
+  kill:
+    description: Kill a player
+  suicide:
+    description: Kill yourself
+  heal:
+    description: Heal yourself or another player
+  feed:
+    description: Feed yourself or another player
 
 

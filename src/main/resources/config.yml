@@ -7,6 +7,9 @@ must-be-player: '&cYou must be a player to execute this command!'
 # Sent when player is not online
 player-not-online: '&cThis player is not online!'
 
+# Sent when a player is not found
+player-not-found: '&cPlayer not found!'
+
 # Message sent when a player doesn't have permission to execute
 # a Command
 no-permission: '&cYou do not have permission to execute this command!'
@@ -37,3 +40,28 @@ website-output: '&aWebsite &7: &ahttps://your-link-here'
 broadcast-format: '&c/(Broadcast, Alert, Announce) (message)'
 # Broadcast prefix
 broadcast-prefix: '&c&lALERT&7:&f '
+
+# /kill Format
+kill-format: '&e/kill &7(Player)'
+# Sent to target when killed
+player-killed-you: '&eYou have been &cKilled &eby &b'
+# Sent to the sender when they kill someone else
+killed-others: '&eYou have &cKilled &b'
+
+# Sent when a player kills themself via /suicide
+suicide-message: '&eYou have &cKilled &eyourself!'
+
+# Sent when the target has been healed
+target-healed: '&eYou have been &aHealed &eby &a'
+# Sent to Sender when target has been healed
+healed-others: '&eYou have &aHealed '
+# Sent when you heal yourself
+healed-self: '&eYou have &aHealed &eyourself!'
+
+# Sent to target when they are fed
+target-fed: '&eYou have been &aFed &eby &a'
+# Sent to sender when they fed someone else
+fed-others: '&eYou have &aFed '
+# Sent to player who feed themself
+fed-self: '&eYou have &aFed &eyourself!'
+

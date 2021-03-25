@@ -1,4 +1,4 @@
-# All permission nodes will be listed here!
+# All permission nodes & commands will be listed here!
 
 /fly - core.command.fly
 /fly (player) - core.command.fly.others
@@ -11,3 +11,9 @@
 /r (message) - core.command.reply
 /discord - core.command.discord
 /website - core.command.website
+/kill (player) - core.command.kill.others
+/suicide - core.command.suicide
+/heal (player) - core.command.heal.others
+/heal - core.command.heal
+/feed - core.command.feed
+/feed (player) - core.command.feed.others
