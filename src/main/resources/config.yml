@@ -65,3 +65,16 @@ fed-others: '&eYou have &aFed '
 # Sent to player who feed themself
 fed-self: '&eYou have &aFed &eyourself!'
 
+# /smite Format
+smite-format: '&e/smite &7(Player)'
+
+# /burn Format
+burn-format: '&e/burn &7(Player)'
+
+# Sent to target when their inventory get's cleared
+target-ci: '&eYour inventory has been &cCleared &eby &c'
+# Sent to sender when clearing someone's inventory
+sender-ci: '&eYou have &ccleared &ethe inventory of &c'
+# Sent to player when clearing their own inventory
+self-ci: '&eYou have &ccleared &eyour inventory!'
+

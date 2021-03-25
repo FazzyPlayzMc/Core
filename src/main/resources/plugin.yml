@@ -38,5 +38,14 @@ commands:
     description: Heal yourself or another player
   feed:
     description: Feed yourself or another player
+  smite:
+    description: Smite a player (lmao)
+    aliases: [lightning]
+  burn:
+    description: Set player on fire
+    aliases: [fire]
+  clearinventory:
+    description: Clear yours or other players Inventory
+    aliases: [ci, clear, clearinv]
 
 

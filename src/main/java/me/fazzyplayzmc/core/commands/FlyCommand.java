@@ -26,7 +26,11 @@ public class FlyCommand implements CommandExecutor {
         }
             Player player = (Player) sender;
             if(args.length == 0){
-                flyMethod(player);
+                if(player.hasPermission("core.command.fly")){
+                    flyMethod(player);
+                } else {
+                    player.sendMessage(ChatColor.translateAlternateColorCodes('&', plugin.getConfig().getString("no-permission")));
+                }
             } else if (args.length == 1){
                 if (player.hasPermission("core.command.fly.others")){
                     Player target = Bukkit.getPlayer(args[0]);
@@ -41,16 +45,12 @@ public class FlyCommand implements CommandExecutor {
 
     // Method for toggling fly
     private void flyMethod(Player player){
-        if(player.hasPermission("core.command.fly")){
-            if (player.getAllowFlight() == true) {
-                player.setAllowFlight(false);
-                player.sendMessage(ChatColor.translateAlternateColorCodes('&', plugin.getConfig().getString("fly-false")));
-            } else if (!player.getAllowFlight() == true) {
-                player.setAllowFlight(true);
-                player.sendMessage(ChatColor.translateAlternateColorCodes('&', plugin.getConfig().getString("fly-true")));
-            }
-        } else {
-            player.sendMessage(ChatColor.translateAlternateColorCodes('&', plugin.getConfig().getString("no-permission")));
+        if (player.getAllowFlight() == true) {
+            player.setAllowFlight(false);
+            player.sendMessage(ChatColor.translateAlternateColorCodes('&', plugin.getConfig().getString("fly-false")));
+        } else if (!player.getAllowFlight() == true) {
+            player.setAllowFlight(true);
+            player.sendMessage(ChatColor.translateAlternateColorCodes('&', plugin.getConfig().getString("fly-true")));
         }
     }
 }

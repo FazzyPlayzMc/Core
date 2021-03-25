@@ -28,6 +28,9 @@ public final class Core extends JavaPlugin {
         getCommand("suicide").setExecutor(new SuicideCmd(this));
         getCommand("heal").setExecutor(new HealCmd(this));
         getCommand("feed").setExecutor(new FeedCmd(this));
+        getCommand("smite").setExecutor(new SmiteCmd(this));
+        getCommand("burn").setExecutor(new BurnCmd(this));
+        getCommand("clearinventory").setExecutor(new ClearinvCmd(this));
         mM = new messageManager(this);
     }
 }
