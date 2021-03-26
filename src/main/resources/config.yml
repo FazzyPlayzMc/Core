@@ -78,3 +78,12 @@ sender-ci: '&eYou have &ccleared &ethe inventory of &c'
 # Sent to player when clearing their own inventory
 self-ci: '&eYou have &ccleared &eyour inventory!'
 
+# Sent to sender when teleporting to a player
+tp-msg: '&eYou have teleported to &c'
+# Sent to target when player teleports to them
+target-tp: ' &ehas teleported to you!'
+# Color of player name sent to target when player teleports to them
+name-color: '&c'
+# /tp Format
+tp-format: '&e/tp &7(Player)'
+

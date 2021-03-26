@@ -31,6 +31,7 @@ public final class Core extends JavaPlugin {
         getCommand("smite").setExecutor(new SmiteCmd(this));
         getCommand("burn").setExecutor(new BurnCmd(this));
         getCommand("clearinventory").setExecutor(new ClearinvCmd(this));
+        getCommand("tp").setExecutor(new TpCmd(this));
         mM = new messageManager(this);
     }
 }

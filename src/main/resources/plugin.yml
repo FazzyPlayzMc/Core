@@ -47,5 +47,10 @@ commands:
   clearinventory:
     description: Clear yours or other players Inventory
     aliases: [ci, clear, clearinv]
+  tp:
+    description: Teleport to players & vice-versa
+    aliases: [teleport]
+
+
 
 
