@@ -22,3 +22,5 @@
 /clearinventory (/ci, /clearinv, /clear) - core.command.clearinv
 /clearinventory[/ci, /clearinv, /clear] (player) - core.command.clearinv.others
 /tp (player) - core.command.tp
+/tphere (player) - core.command.tphere
+/tpall - core.command.tpall

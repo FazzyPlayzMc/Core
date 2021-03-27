@@ -32,6 +32,8 @@ public final class Core extends JavaPlugin {
         getCommand("burn").setExecutor(new BurnCmd(this));
         getCommand("clearinventory").setExecutor(new ClearinvCmd(this));
         getCommand("tp").setExecutor(new TpCmd(this));
+        getCommand("tphere").setExecutor(new TphereCmd(this));
+        getCommand("tpall").setExecutor(new TpallCmd(this));
         mM = new messageManager(this);
     }
 }

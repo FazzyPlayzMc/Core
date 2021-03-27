@@ -8,11 +8,11 @@ import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
-public class TpCmd implements CommandExecutor {
+public class TphereCmd implements CommandExecutor {
 
     private Core plugin;
 
-    public TpCmd(Core plugin){
+    public TphereCmd(Core plugin){
         this.plugin = plugin;
     }
 
@@ -24,12 +24,13 @@ public class TpCmd implements CommandExecutor {
             return true;
         }
         Player p = (Player) sender;
-        if (args.length == 1) {
-            if (p.hasPermission("core.command.tp")){
+        if (args.length == 1){
+            if (p.hasPermission("core.command.tphere")){
                 if (Bukkit.getPlayer(args[0]) != null){
                     Player target = Bukkit.getPlayer(args[0]);
-                    p.teleport(target.getLocation());
-                    sender.sendMessage(ChatColor.translateAlternateColorCodes('&', plugin.getConfig().getString("tp-msg") + target.getName()));
+                    target.teleport(p.getLocation());
+                    sender.sendMessage(ChatColor.translateAlternateColorCodes('&', plugin.getConfig().getString("tphere-name-color")) + target.getName() + ChatColor.translateAlternateColorCodes('&', plugin.getConfig().getString("tphere-msg")));
+                    target.sendMessage(ChatColor.translateAlternateColorCodes('&', plugin.getConfig().getString("tphere-target")) + sender.getName());
                 } else {
                     sender.sendMessage(ChatColor.translateAlternateColorCodes('&', plugin.getConfig().getString("player-not-found")));
                 }
@@ -37,7 +38,7 @@ public class TpCmd implements CommandExecutor {
             }
             p.sendMessage(ChatColor.translateAlternateColorCodes('&', plugin.getConfig().getString("no-permission")));
         } else if (args.length == 0){
-            sender.sendMessage(ChatColor.translateAlternateColorCodes('&', plugin.getConfig().getString("tp-format")));
+            sender.sendMessage(ChatColor.translateAlternateColorCodes('&', plugin.getConfig().getString("tphere-format")));
         }
         return true;
     }

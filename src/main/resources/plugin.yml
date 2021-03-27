@@ -48,8 +48,13 @@ commands:
     description: Clear yours or other players Inventory
     aliases: [ci, clear, clearinv]
   tp:
-    description: Teleport to players & vice-versa
+    description: Teleport to players
     aliases: [teleport]
+  tphere:
+    description: Teleport players to you
+  tpall:
+    description: Teleport every player to your location
+
 
 
 

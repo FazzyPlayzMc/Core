@@ -80,10 +80,22 @@ self-ci: '&eYou have &ccleared &eyour inventory!'
 
 # Sent to sender when teleporting to a player
 tp-msg: '&eYou have teleported to &c'
-# Sent to target when player teleports to them
-target-tp: ' &ehas teleported to you!'
-# Color of player name sent to target when player teleports to them
-name-color: '&c'
 # /tp Format
 tp-format: '&e/tp &7(Player)'
+# Sent to sender when teleporting players to themself
+tphere-msg: ' &ehas been teleported to your location!'
+# Color of player name sent to sender when tping other player to themself
+tphere-name-color: '&c'
+# Sent to target when getting tphere'd to another player
+tphere-target: '&eYou have been teleported to &c'
+# /tphere Format
+tphere-format: '&e/tphere &7(Player)'
 
+# Sent when there are no players to /tpall
+tpall-no-players: '&cThere are no players online!'
+# Color of the player count sent when all players get teleported to /tpall executer
+playernum-color: '&c'
+# /tpall Message sent to command executer
+tpall-msg: ' &eplayers have been teleported to you!'
+# Sent to all players teleported because of /tpall
+target-tpall: '&eYou have been teleported to &c'
