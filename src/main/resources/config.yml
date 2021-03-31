@@ -18,6 +18,18 @@ no-permission: '&cYou do not have permission to execute this command!'
 fly-true: '&eFly has been set to &aTrue'
 fly-false: '&eFly has been set to &cFalse'
 
+# /fspeed Format
+fspeed-format: '&e/fspeed &7(speed) <Number between 0.1-1> <Default speed is 0.1>'
+# Sent to player when they change their fly speed
+set-fspeed: '&eYou have changed your &aFly Speed &eto &c'
+# Sent if player gives smaller number
+invalid-number: '&cNumber must be between 0.1 and 1'
+
+# /wspeed Format
+wspeed-format: '&e/wspeed &7(speed) <Number between 0.1-1> <Default speed is 0.2>'
+# Sent to player when they change their fly speed
+set-wspeed: '&eYou have changed your &aWalk Speed &eto &c'
+
 # Option for changing Gamemode messages
 gamemode-creative: '&eGamemode has been set to &aCreative'
 gamemode-survival: '&eGamemode has been set to &aSurvival'
@@ -44,9 +56,9 @@ broadcast-prefix: '&c&lALERT&7:&f '
 # /kill Format
 kill-format: '&e/kill &7(Player)'
 # Sent to target when killed
-player-killed-you: '&eYou have been &cKilled &eby &b'
+player-killed-you: '&eYou have been &cKilled &eby &a'
 # Sent to the sender when they kill someone else
-killed-others: '&eYou have &cKilled &b'
+killed-others: '&eYou have &cKilled &a'
 
 # Sent when a player kills themself via /suicide
 suicide-message: '&eYou have &cKilled &eyourself!'
@@ -72,30 +84,30 @@ smite-format: '&e/smite &7(Player)'
 burn-format: '&e/burn &7(Player)'
 
 # Sent to target when their inventory get's cleared
-target-ci: '&eYour inventory has been &cCleared &eby &c'
+target-ci: '&eYour inventory has been &aCleared &eby &c'
 # Sent to sender when clearing someone's inventory
-sender-ci: '&eYou have &ccleared &ethe inventory of &c'
+sender-ci: '&eYou have &acleared &ethe inventory of &c'
 # Sent to player when clearing their own inventory
-self-ci: '&eYou have &ccleared &eyour inventory!'
+self-ci: '&eYou have &acleared &eyour inventory!'
 
 # Sent to sender when teleporting to a player
-tp-msg: '&eYou have teleported to &c'
+tp-msg: '&eYou have teleported to &a'
 # /tp Format
 tp-format: '&e/tp &7(Player)'
 # Sent to sender when teleporting players to themself
 tphere-msg: ' &ehas been teleported to your location!'
 # Color of player name sent to sender when tping other player to themself
-tphere-name-color: '&c'
+tphere-name-color: '&a'
 # Sent to target when getting tphere'd to another player
-tphere-target: '&eYou have been teleported to &c'
+tphere-target: '&eYou have been teleported to &a'
 # /tphere Format
 tphere-format: '&e/tphere &7(Player)'
 
 # Sent when there are no players to /tpall
 tpall-no-players: '&cThere are no players online!'
 # Color of the player count sent when all players get teleported to /tpall executer
-playernum-color: '&c'
+playernum-color: '&a'
 # /tpall Message sent to command executer
 tpall-msg: ' &eplayers have been teleported to you!'
 # Sent to all players teleported because of /tpall
-target-tpall: '&eYou have been teleported to &c'
+target-tpall: '&eYou have been teleported to &a'

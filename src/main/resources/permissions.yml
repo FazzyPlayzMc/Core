@@ -2,6 +2,8 @@
 
 /fly - core.command.fly
 /fly (player) - core.command.fly.others
+/fspeed - core.command.fspeed
+/wspeed - core.command.wspeed
 /gmc - core.command.gamemode.creative
 /gms - core.command.gamemode.survival
 /gmsp - core.command.gamemode.spectator

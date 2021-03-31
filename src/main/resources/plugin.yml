@@ -10,6 +10,10 @@ website: []
 commands:
   fly:
     description: Toggle Fly
+  fspeed:
+    description: Set flying speed
+  wspeed:
+    description: Set walking speed
   gmc:
     description: Toggle gamemode creative
   gms:
@@ -54,6 +58,7 @@ commands:
     description: Teleport players to you
   tpall:
     description: Teleport every player to your location
+
 
 
 

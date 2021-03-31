@@ -15,6 +15,7 @@ public final class Core extends JavaPlugin {
 
         // Set commands here
         getCommand("fly").setExecutor(new FlyCommand(this));
+        getCommand("fspeed").setExecutor(new FspeedCmd(this));
         getCommand("gmc").setExecutor(new GmcCommand(this));
         getCommand("gms").setExecutor(new GmsCommand(this));
         getCommand("gma").setExecutor(new GmaCommand(this));
@@ -34,6 +35,7 @@ public final class Core extends JavaPlugin {
         getCommand("tp").setExecutor(new TpCmd(this));
         getCommand("tphere").setExecutor(new TphereCmd(this));
         getCommand("tpall").setExecutor(new TpallCmd(this));
+        getCommand("wspeed").setExecutor(new WspeedCmd(this));
         mM = new messageManager(this);
     }
 }
