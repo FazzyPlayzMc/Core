@@ -111,3 +111,16 @@ playernum-color: '&a'
 tpall-msg: ' &eplayers have been teleported to you!'
 # Sent to all players teleported because of /tpall
 target-tpall: '&eYou have been teleported to &a'
+
+# Sent to player when toggling godmode off
+god-false: '&aGod-Mode &ehas been set to &cFalse&e!'
+# Sent to player when toggling godmode on
+god-true: '&aGod-Mode &ehas been set to &aTrue&e!'
+# Sent to target when someone else toggles their godmode off
+god-false-byothers: '&aGod-Mode &ehas been set to &cFalse &eby &a'
+# Sent to sender when toggling godmode off for a target
+god-false-other: '&aGod-Mode &ehas been set to &cFalse &efor &a'
+# Sent to target when someone else toggles their godmode on
+god-true-byothers: '&aGod-Mode &ehas been set to &aTrue &eby &a'
+# Sent to sender when toggling godmode on for a target
+god-true-other: '&aGod-Mode &ehas been set to &aTrue &efor &a'

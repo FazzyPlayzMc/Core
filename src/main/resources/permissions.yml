@@ -26,3 +26,5 @@
 /tp (player) - core.command.tp
 /tphere (player) - core.command.tphere
 /tpall - core.command.tpall
+/god - core.command.god
+/god (Player) - core.command.god.others

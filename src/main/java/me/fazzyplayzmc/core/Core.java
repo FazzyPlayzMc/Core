@@ -1,11 +1,17 @@
 package me.fazzyplayzmc.core;
 
 import me.fazzyplayzmc.core.commands.*;
+import me.fazzyplayzmc.core.listener.PlayerDamageListener;
+import org.bukkit.entity.Player;
 import org.bukkit.plugin.java.JavaPlugin;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public final class Core extends JavaPlugin {
 
     public messageManager mM;
+    private List<Player> GodPlayers = new ArrayList<Player>();
 
     @Override
     public void onEnable() {
@@ -36,6 +42,31 @@ public final class Core extends JavaPlugin {
         getCommand("tphere").setExecutor(new TphereCmd(this));
         getCommand("tpall").setExecutor(new TpallCmd(this));
         getCommand("wspeed").setExecutor(new WspeedCmd(this));
+        getCommand("god").setExecutor(new GodCmd(this));
         mM = new messageManager(this);
+
+        // Registering Listener
+        getServer().getPluginManager().registerEvents(new PlayerDamageListener(this), this);
+
     }
+
+    public void addGodPlayer(Player player){
+        GodPlayers.add(player);
+    }
+
+    public void removeGodPlayer(Player player){
+        GodPlayers.remove(player);
+    }
+
+    public List<Player> getGodPlayers(){
+        return GodPlayers;
+    }
+
+    public boolean hasGodPlayers(){
+        if (GodPlayers.isEmpty()){
+            return false;
+        }
+        return true;
+    }
+
 }
