@@ -40,7 +40,6 @@ public class BroadcastCommand implements CommandExecutor {
     }
 
     private static final String FORMAT(String text){
-        return text.replace("§", "&");
+        return text.replace("&", "§");
     }
-
 }
