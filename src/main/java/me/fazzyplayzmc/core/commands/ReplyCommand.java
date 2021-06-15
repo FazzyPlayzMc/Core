@@ -17,31 +17,30 @@ public class ReplyCommand implements CommandExecutor {
 
     @Override
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args){
-        if(!(sender instanceof Player)){
-            sender.sendMessage(ChatColor.translateAlternateColorCodes('&', plugin.getConfig().getString("must-be-player")));
+        if(!(sender instanceof Player p)){
+            sender.sendMessage(Core.color(plugin.getConfig().getString("must-be-player")));
             return true;
         }
-        Player player = (Player) sender;
-        if (player.hasPermission("core.command.reply")){
+        if (p.hasPermission("core.command.reply")){
             if (args.length > 0){
                 Player messager = (Player) sender;
-                if(plugin.mM.getReplyTarget(messager) == null){
-                    messager.sendMessage(ChatColor.translateAlternateColorCodes('&', plugin.getConfig().getString("no-conversation")));
+                if(plugin.messageManager.getReplyTarget(messager) == null){
+                    messager.sendMessage(Core.color(plugin.getConfig().getString("no-conversation")));
                     return true;
                 }
-                Player receiver = plugin.mM.getReplyTarget(messager);
-                String message = "";
-                for(int i = 0; i < args.length; i++){
-                    message += " " + args[i];
+                Player receiver = plugin.messageManager.getReplyTarget(messager);
+                StringBuilder message = new StringBuilder();
+                for (String arg : args){
+                    message.append(" ").append(arg);
                 }
                 messager.sendMessage(ChatColor.DARK_GRAY + "[" + ChatColor.GRAY + "Me" + ChatColor.DARK_GRAY + " -> " + ChatColor.GRAY + receiver.getName() + ChatColor.DARK_GRAY + "] " + message);
                 receiver.sendMessage(ChatColor.DARK_GRAY + "[" + ChatColor.GRAY + messager.getName() + ChatColor.DARK_GRAY + " -> " + ChatColor.GRAY + "Me" + ChatColor.DARK_GRAY + "] " + message);
                 return true;
             } else {
-                sender.sendMessage(ChatColor.translateAlternateColorCodes('&', plugin.getConfig().getString("reply-format")));
+                sender.sendMessage(Core.color(plugin.getConfig().getString("reply-format")));
             }
         } else {
-            player.sendMessage(ChatColor.translateAlternateColorCodes('&', plugin.getConfig().getString("no-permission")));
+            p.sendMessage(Core.color(plugin.getConfig().getString("no-permission")));
         }
         return false;
     }

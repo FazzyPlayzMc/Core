@@ -2,7 +2,6 @@ package me.fazzyplayzmc.core.commands;
 
 import me.fazzyplayzmc.core.Core;
 import org.bukkit.Bukkit;
-import org.bukkit.ChatColor;
 import org.bukkit.Location;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
@@ -19,11 +18,10 @@ public class SmiteCmd implements CommandExecutor {
 
     @Override
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args){
-        if (!(sender instanceof Player)){
-            sender.sendMessage(ChatColor.translateAlternateColorCodes('&', plugin.getConfig().getString("must-be-player")));
+        if (!(sender instanceof Player p)){
+            sender.sendMessage(Core.color(plugin.getConfig().getString("must-be-player")));
             return true;
         }
-        Player p = (Player) sender;
         Location loc = p.getLocation();
         if (p.hasPermission("core.command.smite")){
             if (args.length >= 1){
@@ -31,13 +29,13 @@ public class SmiteCmd implements CommandExecutor {
                     Player target = Bukkit.getPlayer(args[0]);
                     target.getWorld().strikeLightning(loc);
                 } else {
-                    sender.sendMessage(ChatColor.translateAlternateColorCodes('&', plugin.getConfig().getString("player-not-found")));
+                    sender.sendMessage(Core.color(plugin.getConfig().getString("player-not-found")));
                 }
             } else if (args.length <= 0){
-                p.sendMessage(ChatColor.translateAlternateColorCodes('&', plugin.getConfig().getString("smite-format")));
+                p.sendMessage(Core.color(plugin.getConfig().getString("smite-format")));
             }
         } else {
-            p.sendMessage(ChatColor.translateAlternateColorCodes('&', plugin.getConfig().getString("no-permission")));
+            p.sendMessage(Core.color(plugin.getConfig().getString("no-permission")));
         }
         return true;
     }

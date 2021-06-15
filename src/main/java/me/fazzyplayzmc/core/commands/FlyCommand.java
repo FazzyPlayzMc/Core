@@ -2,7 +2,6 @@ package me.fazzyplayzmc.core.commands;
 
 import me.fazzyplayzmc.core.Core;
 import org.bukkit.Bukkit;
-import org.bukkit.ChatColor;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.command.Command;
@@ -20,37 +19,27 @@ public class FlyCommand implements CommandExecutor {
     @Override
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
 
-        if (!(sender instanceof Player)){
-            sender.sendMessage(ChatColor.translateAlternateColorCodes('&', plugin.getConfig().getString("must-be-player")));
+        if (!(sender instanceof Player p)){
+            sender.sendMessage(Core.color(plugin.getConfig().getString("must-be-player")));
             return true;
         }
-            Player player = (Player) sender;
             if(args.length == 0){
-                if(player.hasPermission("core.command.fly")){
-                    flyMethod(player);
+                if(p.hasPermission("core.command.fly")){
+                    p.setAllowFlight(!p.getAllowFlight());
+                    p.sendMessage(Core.color(plugin.getConfig().getString("fly-" + p.getAllowFlight())));
                 } else {
-                    player.sendMessage(ChatColor.translateAlternateColorCodes('&', plugin.getConfig().getString("no-permission")));
+                    p.sendMessage(Core.color(plugin.getConfig().getString("no-permission")));
                 }
             } else if (args.length == 1){
-                if (player.hasPermission("core.command.fly.others")){
+                if (p.hasPermission("core.command.fly.others")){
                     Player target = Bukkit.getPlayer(args[0]);
-                    flyMethod(target);
+                    target.setAllowFlight(!p.getAllowFlight());
+                    target.sendMessage(Core.color(plugin.getConfig().getString("fly-" + p.getAllowFlight())));
                 } else {
-                    player.sendMessage(ChatColor.translateAlternateColorCodes('&', plugin.getConfig().getString("no-permission")));
+                    p.sendMessage(Core.color(plugin.getConfig().getString("no-permission")));
                 }
             }
 
         return true;
-    }
-
-    // Method for toggling fly
-    private void flyMethod(Player player){
-        if (player.getAllowFlight() == true) {
-            player.setAllowFlight(false);
-            player.sendMessage(ChatColor.translateAlternateColorCodes('&', plugin.getConfig().getString("fly-false")));
-        } else if (!player.getAllowFlight() == true) {
-            player.setAllowFlight(true);
-            player.sendMessage(ChatColor.translateAlternateColorCodes('&', plugin.getConfig().getString("fly-true")));
-        }
     }
 }

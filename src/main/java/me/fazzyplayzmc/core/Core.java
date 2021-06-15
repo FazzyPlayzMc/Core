@@ -1,7 +1,9 @@
 package me.fazzyplayzmc.core;
 
 import me.fazzyplayzmc.core.commands.*;
+import me.fazzyplayzmc.core.listener.PlayerChatListener;
 import me.fazzyplayzmc.core.listener.PlayerDamageListener;
+import org.bukkit.ChatColor;
 import org.bukkit.entity.Player;
 import org.bukkit.plugin.java.JavaPlugin;
 
@@ -10,8 +12,12 @@ import java.util.List;
 
 public final class Core extends JavaPlugin {
 
-    public messageManager mM;
-    private List<Player> GodPlayers = new ArrayList<Player>();
+    public MessageManager messageManager;
+    private List<Player> GodPlayers = new ArrayList<>();
+
+    public MessageManager getMessageManager(){
+        return messageManager;
+    }
 
     @Override
     public void onEnable() {
@@ -22,10 +28,11 @@ public final class Core extends JavaPlugin {
         // Set commands here
         getCommand("fly").setExecutor(new FlyCommand(this));
         getCommand("fspeed").setExecutor(new FspeedCmd(this));
-        getCommand("gmc").setExecutor(new GmcCommand(this));
-        getCommand("gms").setExecutor(new GmsCommand(this));
-        getCommand("gma").setExecutor(new GmaCommand(this));
-        getCommand("gmsp").setExecutor(new GmspCommand(this));
+        GamemodeCmd gamemodeCmd = new GamemodeCmd(this);
+        getCommand("gmc").setExecutor(gamemodeCmd);
+        getCommand("gms").setExecutor(gamemodeCmd);
+        getCommand("gmsp").setExecutor(gamemodeCmd);
+        getCommand("gma").setExecutor(gamemodeCmd);
         getCommand("msg").setExecutor(new MsgCommand(this));
         getCommand("r").setExecutor(new ReplyCommand(this));
         getCommand("discord").setExecutor(new DiscordCommand(this));
@@ -43,7 +50,10 @@ public final class Core extends JavaPlugin {
         getCommand("tpall").setExecutor(new TpallCmd(this));
         getCommand("wspeed").setExecutor(new WspeedCmd(this));
         getCommand("god").setExecutor(new GodCmd(this));
-        mM = new messageManager(this);
+        getCommand("nick").setExecutor(new NickCmd(this));
+        getCommand("repair").setExecutor(new RepairCmd(this));
+        getCommand("spawn").setExecutor(new SpawnCmd(this));
+        messageManager = new MessageManager(this);
 
         // Registering Listener
         getServer().getPluginManager().registerEvents(new PlayerDamageListener(this), this);
@@ -63,10 +73,10 @@ public final class Core extends JavaPlugin {
     }
 
     public boolean hasGodPlayers(){
-        if (GodPlayers.isEmpty()){
-            return false;
-        }
-        return true;
+        return !GodPlayers.isEmpty();
     }
 
+    public static String color(String uncolored){
+        return ChatColor.translateAlternateColorCodes('&', uncolored);
+    }
 }

@@ -20,8 +20,7 @@ public class PlayerDamageListener implements Listener {
     @EventHandler
     public void onEntityDamage(EntityDamageEvent e){
         Entity entity = e.getEntity();
-        if (entity instanceof Player){
-            Player p = (Player) entity;
+        if (entity instanceof Player p){
             if (plugin.getGodPlayers().contains(p)){
                 e.setCancelled(true);
             }
@@ -31,8 +30,7 @@ public class PlayerDamageListener implements Listener {
     @EventHandler
     public void onHunger(FoodLevelChangeEvent e){
         Entity entity = e.getEntity();
-        if (entity instanceof Player){
-            Player p = (Player) entity;
+        if (entity instanceof Player p){
             if (plugin.getGodPlayers().contains(p)){
                 e.setCancelled(true);
             }

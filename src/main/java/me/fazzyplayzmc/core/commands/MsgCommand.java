@@ -19,32 +19,31 @@ public class MsgCommand implements CommandExecutor {
     @SuppressWarnings("deprecation")
     @Override
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
-        if(!(sender instanceof Player)){
-            sender.sendMessage(ChatColor.translateAlternateColorCodes('&', plugin.getConfig().getString("must-be-player")));
+        if(!(sender instanceof Player p)){
+            sender.sendMessage(Core.color(plugin.getConfig().getString("must-be-player")));
             return true;
         }
-        Player player = (Player) sender;
-        if(player.hasPermission("core.command.message")){
+        if(p.hasPermission("core.command.message")){
             if(args.length > 0){
                 if(Bukkit.getOfflinePlayer(args[0]).getPlayer() != null){
                     Player messager = (Player) sender;
                     Player receiver = Bukkit.getOfflinePlayer(args[0]).getPlayer();
-                    plugin.mM.setReplyTarget(messager, receiver);
-                    args[0] = "";
-                    String message = "";
-                    for(int i = 0; i < args.length; i++){
-                        message += " " + args[i];
+                    plugin.messageManager.setReplyTarget(messager, receiver);
+                    StringBuilder sb = new StringBuilder();
+                    for (int i = 1; i < args.length; i++) {
+                        sb.append(args[i]).append(" ");
                     }
+                    String message = sb.toString();
                     messager.sendMessage(ChatColor.DARK_GRAY + "[" + ChatColor.GRAY + "Me" + ChatColor.DARK_GRAY + " -> " + ChatColor.GRAY + receiver.getName() + ChatColor.DARK_GRAY + "] " + message);
                     receiver.sendMessage(ChatColor.DARK_GRAY + "[" + ChatColor.GRAY + messager.getName() + ChatColor.DARK_GRAY + " -> " + ChatColor.GRAY + "Me" + ChatColor.DARK_GRAY + "] " + message);
                 } else {
-                    sender.sendMessage(ChatColor.translateAlternateColorCodes('&', plugin.getConfig().getString("player-not-online")));
+                    sender.sendMessage(Core.color(plugin.getConfig().getString("player-not-online")));
                 }
             } else {
-                sender.sendMessage(ChatColor.translateAlternateColorCodes('&', plugin.getConfig().getString("msg-format")));
+                sender.sendMessage(Core.color(plugin.getConfig().getString("msg-format")));
             }
         } else {
-            player.sendMessage(ChatColor.translateAlternateColorCodes('&', plugin.getConfig().getString("no-permission")));
+            p.sendMessage(Core.color(plugin.getConfig().getString("no-permission")));
         }
         return false;
     }

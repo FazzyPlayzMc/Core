@@ -1,6 +1,7 @@
-# This is the messages file for the Core plugin
+# This is the Config file for the Core plugin
 # Almost every single message will be customizable here!
 
+# ALL MESSAGES ARE HERE!
 # Sent when the executer isn't a player
 must-be-player: '&cYou must be a player to execute this command!'
 
@@ -30,11 +31,13 @@ wspeed-format: '&e/wspeed &7(speed) <Number between 0.1-1> <Default speed is 0.2
 # Sent to player when they change their fly speed
 set-wspeed: '&eYou have changed your &aWalk Speed &eto &c'
 
-# Option for changing Gamemode messages
-gamemode-creative: '&eGamemode has been set to &aCreative'
-gamemode-survival: '&eGamemode has been set to &aSurvival'
-gamemode-spectator: '&eGamemode has been set to &aSpectator'
-gamemode-adventure: '&eGamemode has been set to &aAdventure'
+# Sent when a player has their gamemode changed by themselves or by others
+gamemode-change: '&eGamemode has been set to &a{gamemode}'
+# Sent to sender when they change others gamemode
+gamemode-change-others: '&eYou have changed &a{player}''s &eGamemode to &a{gamemode}'
+
+# Gamemode Format
+gamemode-format: '/gmc, /gms, /gmsp, /gma'
 
 # /msg Format
 msg-format: '&e/msg &7(Player) (Message)'

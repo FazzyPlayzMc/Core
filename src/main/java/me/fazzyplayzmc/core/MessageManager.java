@@ -4,13 +4,13 @@ import org.bukkit.entity.Player;
 
 import java.util.HashMap;
 
-public class messageManager {
+public class MessageManager {
 
     private Core plugin;
 
-    HashMap<Player,Player> conversations = new HashMap<Player, Player>();
+    HashMap<Player,Player> conversations = new HashMap<>();
 
-    public messageManager(Core plugin) {
+    public MessageManager(Core plugin) {
         this.plugin = plugin;
     }
 
