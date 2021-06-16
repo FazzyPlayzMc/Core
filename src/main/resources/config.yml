@@ -1,6 +1,16 @@
 # This is the Config file for the Core plugin
 # Almost every single message will be customizable here!
 
+# Location for /spawn
+# No /setspawn command(yet)
+spawn:
+  world: "world"
+  x: 0.500
+  y: 0
+  z: 0.500
+  yaw: 90
+  pitch: 0
+
 # ALL MESSAGES ARE HERE!
 # Sent when the executer isn't a player
 must-be-player: '&cYou must be a player to execute this command!'
@@ -127,3 +137,23 @@ god-false-other: '&aGod-Mode &ehas been set to &cFalse &efor &a'
 god-true-byothers: '&aGod-Mode &ehas been set to &aTrue &eby &a'
 # Sent to sender when toggling godmode on for a target
 god-true-other: '&aGod-Mode &ehas been set to &aTrue &efor &a'
+
+# Sent when item in hand is already repaired, cannot be repaired or there is no item
+invalid-item: '&eThis item is already at &aFull Durability &eor cannot be &aRepaired!'
+# Sent to player when the item in hand has been repaired
+repaired-item: '&eThis item has been fully &aRepaired&e!'
+# Sent to player if there is no item in hand to repair
+no-item: '&eThere is no item &eto &aRepair&e!'
+
+# /nick Format
+nick-format: '&e/nick &7(Nickname) <Player>'
+# Sent to player when nickname has been changed
+nick-changed: '&eYour nickname has been changed to &a'
+# Sent to target whos name was changed by another player
+other-changed-nick: ' &ehas changed your nickname to &a'
+# Player name for other-changed-nick
+nick-name-color: '&a'
+# Sent to sender when changing other players name
+changed-others-nick: '&eYou have changed &a{player}''s &enickname to &a{nick}!'
+# Maximum length for nickname
+nick-max-length: 16

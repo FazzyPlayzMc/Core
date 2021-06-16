@@ -57,6 +57,7 @@ public final class Core extends JavaPlugin {
 
         // Registering Listener
         getServer().getPluginManager().registerEvents(new PlayerDamageListener(this), this);
+        getServer().getPluginManager().registerEvents(new PlayerChatListener(this), this);
 
     }
 

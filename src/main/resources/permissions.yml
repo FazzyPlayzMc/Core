@@ -28,3 +28,6 @@
 /tpall - core.command.tpall
 /god - core.command.god
 /god (Player) - core.command.god.others
+/broadcast (/announce, /alert) - core.command.broadcast
+/repair - core.command.repair
+/repair (Player) - core.command.repair.others

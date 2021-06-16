@@ -60,6 +60,12 @@ commands:
     description: Teleport every player to your location
   god:
     description: Become invincible or turn someone else invincible
+  nick:
+    description: Change your display name
+  repair:
+    description: Repair items in your hand
+  spawn:
+    description: Teleport to spawn set in config
 
 
 
