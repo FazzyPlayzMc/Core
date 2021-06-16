@@ -1,7 +1,6 @@
 package me.fazzyplayzmc.core;
 
 import me.fazzyplayzmc.core.commands.*;
-import me.fazzyplayzmc.core.listener.PlayerChatListener;
 import me.fazzyplayzmc.core.listener.PlayerDamageListener;
 import org.bukkit.ChatColor;
 import org.bukkit.entity.Player;
@@ -57,7 +56,6 @@ public final class Core extends JavaPlugin {
 
         // Registering Listener
         getServer().getPluginManager().registerEvents(new PlayerDamageListener(this), this);
-        getServer().getPluginManager().registerEvents(new PlayerChatListener(this), this);
 
     }
 
